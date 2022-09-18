@@ -14,6 +14,7 @@ import { CheckOutComponent } from './main-component/check-out/check-out.componen
 import { FailedComponent } from './main-component/failed/failed.component';
 import { PurchasedSuccessfullyComponent } from './main-component/purchased-successfully/purchased-successfully.component';
 import { AppComponent } from '../app.component';
+import { HomeComponent } from './main-component/home/home.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { AppComponent } from '../app.component';
     EditCartComponent,
     CheckOutComponent,
     FailedComponent,
-    PurchasedSuccessfullyComponent
+    PurchasedSuccessfullyComponent,
+    HomeComponent
   ],
   imports: [
     CommonModule,
