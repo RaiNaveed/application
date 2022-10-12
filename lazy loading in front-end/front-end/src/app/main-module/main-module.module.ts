@@ -15,6 +15,7 @@ import { FailedComponent } from './main-component/failed/failed.component';
 import { PurchasedSuccessfullyComponent } from './main-component/purchased-successfully/purchased-successfully.component';
 import { AppComponent } from '../app.component';
 import { HomeComponent } from './main-component/home/home.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -34,7 +35,9 @@ import { HomeComponent } from './main-component/home/home.component';
   ],
   imports: [
     CommonModule,
-    MainModuleRoutingModule
+    MainModuleRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
