@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ProductService } from 'src/app/shared/services/product.service';
 
 
 @Component({
@@ -11,7 +12,8 @@ export class ProductsComponent implements OnInit {
 
 
 
-  constructor(private _FormBuilder: FormBuilder) { this.adminformmodal() }
+  constructor(private _FormBuilder: FormBuilder,
+              private _ProductService:ProductService) { this.adminformmodal() }
 
   adminproductform: any = FormGroup;
 
@@ -45,6 +47,9 @@ export class ProductsComponent implements OnInit {
     console.log(formData)
     formData.forEach((data:any)=>{
       console.log(data)
+      this._ProductService.AddProduct(formData).subscribe((Resp:any)=>{
+        console.log(Resp)
+      })
     })
   }
 
